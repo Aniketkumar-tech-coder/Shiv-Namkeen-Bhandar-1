@@ -1,20 +1,20 @@
 const SHOP_WHATSAPP="919625985012";
 const products=[
-{id:1,name:"आलू भुजिया",price:240,cat:"namkeen",image:"assets/products/aloo-bhujia.png"},
-{id:2,name:"नवरतन",price:240,cat:"mixture",image:"assets/products/navratan.png"},
-{id:3,name:"केरला",price:240,cat:"mixture",image:"assets/products/kerala.png"},
-{id:4,name:"आलू लच्छा",price:320,cat:"namkeen",image:"assets/products/aloo-lachha.png"},
-{id:5,name:"चिप्स",price:320,cat:"snacks",image:"assets/products/chips.png"},
-{id:6,name:"प्लेन भुजिया",price:240,cat:"namkeen",image:"assets/products/plain-bhujia.png"},
-{id:7,name:"बीकानेरी भुजिया",price:240,cat:"namkeen",image:"assets/products/bikaneri.png"},
-{id:8,name:"कानपुरी मिक्सचर",price:240,cat:"mixture",image:"assets/products/kanpuri.png"},
-{id:9,name:"लाहौरी जीरा",price:240,cat:"snacks",image:"assets/products/lahori-jeera.png"},
-{id:10,name:"मूंग दाल",price:240,cat:"snacks",image:"assets/products/moong-dal.png"},
-{id:11,name:"पालक मिक्सचर",price:240,cat:"mixture",image:"assets/products/palak.png"},
-{id:12,name:"काजू मिक्सचर",price:320,cat:"mixture",image:"assets/products/kaju.png"},
-{id:13,name:"मोटा मिक्सचर",price:260,cat:"mixture",image:"assets/products/mota-mix.png"},
-{id:14,name:"स्पेशल मिक्स",price:260,cat:"mixture",image:"assets/products/special-mix.png"},
-{id:15,name:"फराली मिक्स",price:240,cat:"snacks",image:"assets/products/farali.png"}];
+{id:1,name:"आलू भुजिया",price:240,cat:"namkeen",image:"assets/aloo-bhujia.png"},
+{id:2,name:"नवरतन",price:240,cat:"mixture",image:"assets/navratan.png"},
+{id:3,name:"केरला",price:240,cat:"mixture",image:"assets/kerala.png"},
+{id:4,name:"आलू लच्छा",price:320,cat:"namkeen",image:"assets/aloo-lachha.png"},
+{id:5,name:"चिप्स",price:320,cat:"snacks",image:"assets/chips.png"},
+{id:6,name:"प्लेन भुजिया",price:240,cat:"namkeen",image:"assets/plain-bhujia.png"},
+{id:7,name:"बीकानेरी भुजिया",price:240,cat:"namkeen",image:"assets/bikaneri.png"},
+{id:8,name:"कानपुरी मिक्सचर",price:240,cat:"mixture",image:"assets/kanpuri.png"},
+{id:9,name:"लाहौरी जीरा",price:240,cat:"snacks",image:"assets/lahori-jeera.png"},
+{id:10,name:"मूंग दाल",price:240,cat:"snacks",image:"assets/moong-dal.png"},
+{id:11,name:"पालक मिक्सचर",price:240,cat:"mixture",image:"assets/palak.png"},
+{id:12,name:"काजू मिक्सचर",price:320,cat:"mixture",image:"assets/kaju.png"},
+{id:13,name:"मोटा मिक्सचर",price:260,cat:"mixture",image:"assets/mota-mix.png"},
+{id:14,name:"स्पेशल मिक्स",price:260,cat:"mixture",image:"assets/special-mix.png"},
+{id:15,name:"फराली मिक्स",price:240,cat:"snacks",image:"assets/farali.png"}];
 let cart=[];
 const money=n=>"₹"+Math.round(n).toLocaleString("en-IN");
 function renderProducts(list=products){document.getElementById("resultCount").textContent=`${list.length} products`;document.getElementById("productGrid").innerHTML=list.map(p=>`<article class="product"><div class="photo"><img src="${p.image}" alt="${p.name}"></div><h3>${p.name}</h3><div class="price">${money(p.price)} <span class="unit">/kg</span></div><div class="controls"><button onclick="changeGram(${p.id},-250)">−</button><input id="g${p.id}" class="grams" type="number" min="250" step="250" value="250"><button onclick="changeGram(${p.id},250)">+</button></div><button class="add-btn" onclick="addProduct(${p.id})">🛒 Add to Cart</button></article>`).join("")}
