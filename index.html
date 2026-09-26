@@ -8,7 +8,7 @@
 </head>
 <body>
 <header class="topbar"><div class="header-inner">
-<a class="brand" href="#home"><img src="assets/shiv-logo.jpg" alt="Shiv Namkeen Bhandar"><div><h1>Shiv Namkeen Bhandar</h1><p>स्वाद ऐसा, कि हर बार याद आए...</p></div></a>
+<a class="brand" href="#home"><img src="assets/shiv-logo.png" alt="Shiv Namkeen Bhandar"><div><h1>Shiv Namkeen Bhandar</h1><p>स्वाद ऐसा, कि हर बार याद आए...</p></div></a>
 <div class="search-wrap"><input id="searchInput" type="search" placeholder="Search namkeen, mixture..." aria-label="Search products"><button onclick="searchProducts()">🔍</button></div>
 <nav><a href="#home">Home</a><a href="#products">Products</a><a href="#order">Order</a></nav>
 <button class="cart-btn" onclick="openCart()">🛒 Cart <span id="cartCount">0</span></button>
@@ -17,7 +17,7 @@
 <button class="active" onclick="filterProducts('all',this)">All</button><button onclick="filterProducts('namkeen',this)">Namkeen</button><button onclick="filterProducts('mixture',this)">Mixture</button><button onclick="filterProducts('snacks',this)">Snacks</button>
 </div>
 <main id="home">
-<section class="hero"><img src="assets/hero-banner.jpg" alt="Shiv Namkeen Bhandar banner"></section>
+<section class="hero"><img src="assets/hero-banner.png" alt="Shiv Namkeen Bhandar banner"></section>
 <section class="benefits"><div>🚚 <b>Home Delivery</b><small>आपके घर तक</small></div><div>✨ <b>Fresh Quality</b><small>हर दिन ताज़ा</small></div><div>📦 <b>Bulk Orders</b><small>थोक ऑर्डर उपलब्ध</small></div><div>📲 <b>Easy WhatsApp Order</b><small>एक क्लिक में order</small></div></section>
 <section id="products" class="products-section"><div class="section-head"><div><span class="eyebrow">OUR COLLECTION</span><h2>हमारे Products</h2><p>Rate per kg • 250g से quantity चुनें</p></div><span id="resultCount" class="result-count"></span></div><div id="productGrid" class="grid"></div></section>
 <section id="order" class="order-area">
