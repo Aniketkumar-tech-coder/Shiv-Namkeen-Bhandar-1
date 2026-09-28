@@ -1,4 +1,4 @@
-const SHOP_WHATSAPP="919625985012";
+const SHOP_WHATSAPP="918076320410";
 const products=[
 {id:1,name:"आलू भुजिया",price:240,cat:"namkeen",image:"assets/aloo-bhujia.png"},
 {id:2,name:"नवरतन",price:240,cat:"mixture",image:"assets/navratan.png"},
